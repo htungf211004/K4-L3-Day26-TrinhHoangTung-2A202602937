@@ -7,8 +7,8 @@ classes (CONTRACTS.md section 6.1) each one can save you from.
                      (CONTRACTS.md section 4, exactly)
     strategy.py      discovery / delegation / caching / replica / budget
                      policy — building blocks, not wired in by default
-    guardrails.py    grounding (real), injection/redaction/arithmetic
-                     (named stubs), abstention (real, naive)
+    guardrails.py    citation/injection/privacy/numeric evidence checks,
+                     selective abstention and the GuardedAgent answer boundary
     telemetry.py     ctx.emit wrappers — your own side only, never scored
     prompt.md        the system prompt LAYERED ON TOP of kit.loop.prompt's
                      harness prompt (not a replacement for it)
@@ -38,6 +38,10 @@ from agent.guardrails import (
     redact,
     scan_for_injected_instructions,
     verify_arithmetic,
+    AnswerGuard,
+    GuardedAgent,
+    GuardedAnswer,
+    prepare_answer,
 )
 from agent.strategy import (
     BudgetPacer,
@@ -69,6 +73,10 @@ __all__ = [
     "ArithmeticCheckResult",
     "verify_arithmetic",
     "abstention_policy",
+    "AnswerGuard",
+    "GuardedAgent",
+    "GuardedAnswer",
+    "prepare_answer",
     # strategy.py
     "BudgetPacer",
     "ReplicaChoice",

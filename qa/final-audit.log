@@ -1,0 +1,41 @@
+----------------------------------------------------------------------
+Ran 66 tests in 0.038s
+
+OK
+IMPORT AUDIT: PASS (7 Python files; stdlib and project modules only)
+PROTECTED DIRECTORIES: PASS (git status empty)
+WORLD INTEGRITY: PASS (7 exported files match original ZIP; SHA256 verified; no truth.json)
+BUNDLE AUDIT: PASS (10 payload files, 39 kit Python hashes, valid ZIP)
+BUNDLE SHA256: e2dbc27270883137ff32f36b2b1d537d1b6cb68d701c9dcbfcbe6a8a0293a329
+NOTE: shipped kit.submit records kit/*.py hashes; exported world checked separately above.
+{
+  "date": "2026-10-14",
+  "local_regression_tests": 66,
+  "runtime_samples": {
+    "decide": {
+      "calls": 444,
+      "max_ms": 0.0846830000114096
+    },
+    "prosecute": {
+      "calls": 40,
+      "max_ms": 1.0751480000124047
+    }
+  },
+  "runtime_io_events": [],
+  "prosecution_public_fixtures": {
+    "n_fixtures": 40,
+    "n_errors": 0,
+    "n_timeouts": 0,
+    "filed": 34,
+    "adjudicated": 34,
+    "verified": 34,
+    "unproven": 0,
+    "false": 0,
+    "rejected": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "false_claim_rate": 0.0
+  },
+  "prosecutor_robustness_finding": null
+}

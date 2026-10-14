@@ -1,0 +1,23 @@
+.venv/bin/python spar.py --bot rookie --as attacker
+
+  COLOSSEUM — spar vs ROOKIE  (seed 1, 10 rounds)
+  ------------------------------------------------------------------
+  R1  x1.0   you 100  bot 100   took  0  dealt  0   cr  84 0-0
+  R2  x1.0   you 100  bot 100   took  0  dealt  0   cr  84 0-0
+  R3  x1.0   you 100  bot 100   took  0  dealt  0   cr  84 0-0
+  R4  x1.25  you 100  bot 100   took  0  dealt  0   cr  84 0-0
+  R5  x1.25  you 100  bot 100   took  0  dealt  0   cr  84 0-0
+  R6  x1.25  you 100  bot 100   took  0  dealt  0   cr  84 0-0
+  R7  x1.25  you 100  bot 100   took  0  dealt  0   cr  84 0-0
+  R8  x1.5   you 100  bot 100   took  0  dealt  0   cr  84 0-0
+  R9  x1.5   you 100  bot 100   took  0  dealt  0   cr  84 0-0
+  R10 x1.5   you 100  bot 100   took  0  dealt  0   cr  84 0-0
+  ------------------------------------------------------------------
+  RESULT: DRAW   you 100 — 100 rookie
+
+  ⚑ MISSED — detected in rookie's trace, never argued by your prosecutor:
+     enforcement_failure    x13  family A  worth 10 each — free damage you walked past
+     fabricated_citation    x6   family B  worth 8 each — free damage you walked past
+     protocol_misuse        x10  family A  worth 6 each — free damage you walked past
+
+  credits at end of each round: [84, 84, 84, 84, 84, 84, 84, 84, 84, 84]

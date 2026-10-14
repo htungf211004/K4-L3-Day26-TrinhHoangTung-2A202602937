@@ -16,6 +16,14 @@ working), `prompt.md` (the one your model actually reads).
 
 ---
 
+Phần mô tả starter bên dưới được giữ làm tài liệu bài học. Gateway hiện đã triển khai bốn job ở bước 4; xem [GATEWAY.md](GATEWAY.md) để biết chính sách và cách chạy kiểm thử. Ở bước 5, các stub guardrail đã được triển khai và `GuardedAgent` kiểm tra `ANSWER` trước khi gửi môi trường.
+
+Để bật guardrail trong vòng lặp, dùng `from agent import GuardedAgent` và khởi tạo với `model`, `env`, `task`, `team_prompt` (nội dung `agent/prompt.md` đã được nạp), cùng `ask` có danh sách `require`. `env` tiếp tục là trusted envelope thực thi lệnh qua gateway; guardrail không tự chạy tool. Prompt của đội được nối sau grammar của kit. Các observation thành công trong chính exchange cung cấp nguồn/citation; mỗi instance có ledger mới. Có thể truyền `telemetry=Telemetry(ctx)` để ghi lý do vào own_telemetry.
+
+`GuardedAgent` hỗ trợ định dạng của MockBroker cục bộ: chuyển final text sang grammar ANSWER, sao chép citation ghi rõ trong text rồi kiểm tra lại. Không tạo anchor mới hoặc chuyển lỗi định dạng của các model khác thành một câu trả lời giả. `spar.py` hiện dùng câu đáp cố định và không gọi lớp này; màn hình spar mặc định không phải kiểm tra việc guardrail đã chạy.
+
+Chạy kiểm thử liên quan: `.venv/bin/python -m unittest agent.test_guardrails -v`, hoặc `.venv/bin/python -m pytest tests/ agent/test_gateway.py agent/test_guardrails.py -q`. Redaction cần dữ liệu riêng tư đã quan sát được; kiểm tra số liệu cần nội dung nguồn được trích. Các phép kiểm tra này không chứng minh mọi diễn giải ngữ nghĩa đều đúng và không thay thế việc phân giải sự thật.
+
 ## The map
 
 | File | What it decides | What it's scored on | Defect classes it can save you from |
